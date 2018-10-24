@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title >Reservado</ion-title>   
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="ion-content-class">
+  <button ion-button full color="gris" style="color : #000 ; height: 6%; margin : 0px;">deslizar para fechar a conta</button>
+
+  <ion-list class="accordion-list">
+    
+    <ion-item-group *ngFor="let item of tables; let i = index" class="groupslideclass">
+
+      <ion-item-sliding class="itemslideclass" >
+
+        <ion-item *ngIf="item.avaibility ==='false'"  no-lines (click)="toggleSection(i,item)"  [ngClass]="{'section-active':item.open , 'section': !item.open}">
+           Mesa : {{ item.numTable }}
+          <button ion-button [ngClass]="{'btn-active': item.open , 'btn-notactive': !item.open}"  item-end (click)="addorder(i,item)">PEDIR</button>
+        </ion-item>
+
+        <ion-item-options  side="right">
+          <button ion-button icon-only color="segundo">
+            <ion-icon name="basket" style="color : #000000"></ion-icon>
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+      <ion-list *ngIf="item.open" no-lines padding>
+
+        <!-- Second Level -->
+        <ion-item-group  *ngFor="let type of orderTable; let j = index" >
+
+          <!-- Direct Add Button as Fallback -->
+          <ion-item ion-item detail-none class="child-item" text-wrap>
+            <h2>{{type.quantity }}x {{type.name}}</h2>
+            <h3 *ngIf="type.description_client !== 'null'">{{type.description_client }}</h3>
+            <p end>{{type.date }}</p>
+          </ion-item>
+
+        </ion-item-group >
+
+        <button ion-button full color="segundo" (click)="AlertPedida()">{{firstvar}}R$</button>
+
+      </ion-list>
+      
+    </ion-item-group >
+
+  </ion-list>
+</ion-content>

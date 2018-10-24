@@ -1,0 +1,89 @@
+
+<ion-content  class="model-center"> 
+  <ion-header no-padding  >
+      <ion-navbar>
+          <ion-title>Fechar a conta</ion-title>
+              <ion-buttons end>
+                  <button ion-button calss="closeicon" icon-only (click)="clickback()">
+                      <ion-icon name="close" ></ion-icon>
+                  </button>
+          </ion-buttons>
+      </ion-navbar>
+  </ion-header>
+
+    <ion-list class="listclass" >
+        <ion-item-group  class="itemgroupclass">
+
+            <ion-item no-lines class="itemclass">
+                <ion-row class="rowClass">
+                    <ion-col col-8 padding >
+                        <h2 style="font-weight:bold ; ">Codigo de Pedida:</h2>
+                    </ion-col>
+                    <ion-col col-2 padding>
+                        <h4 > 123456789</h4>
+                    </ion-col> 
+                </ion-row>
+            </ion-item>
+
+            <ion-item>
+                <h2 style="font-weight:bold ; margin-bottom: 2%;">Conta detalhes:</h2>
+            </ion-item>
+
+            <ion-item (click)="affiche(order)" no-lines *ngFor="let order of orderTable"  class="itemclass"> 
+                <ion-row class="rowClass"  >
+                    <ion-col col-6 text-wrap padding>
+                        <h4>{{order.name}}</h4>
+                    </ion-col>
+                    <ion-col col-1 padding>
+                        <h6 >{{order.quantity}}</h6>
+                    </ion-col> 
+                    <ion-col  col-2 padding>
+                        <h6> R${{order.price}}</h6>
+                    </ion-col>
+                </ion-row>
+            </ion-item> 
+
+            <ion-item style="height: 10px;"></ion-item>  
+
+            <ion-item  no-lines class="itemclass"> 
+                <ion-row class="rowClass">
+                    <ion-col col-8 padding>
+                        <h2 style="font-weight:bold ; ">Subtotal :</h2>
+                    </ion-col>
+                    <ion-col col-2 padding>
+                        <h4 > R${{subtotal}}</h4>
+                    </ion-col> 
+                </ion-row>
+            </ion-item>
+
+            <ion-item  no-lines class="itemclass"> 
+                <ion-row>
+                    <ion-col col-8 padding>
+                        <h2 style="font-weight:bold ; ">Servico: </h2>
+                    </ion-col>
+                    <ion-col col-2 padding>
+                        <h4 > R${{servico}}</h4>
+                    </ion-col> 
+                </ion-row>
+            </ion-item>   
+
+            <ion-item  no-lines class="itemclass"> 
+                <ion-row>
+                    <ion-col col-8 padding>
+                        <h2 style="font-weight:bold ; ">Total: </h2>
+                    </ion-col>
+                    <ion-col col-2 padding>
+                        <h4 > R${{total}}</h4>
+                    </ion-col> 
+                </ion-row>
+            </ion-item>   
+
+        </ion-item-group>
+    </ion-list>
+</ion-content>
+
+<ion-footer  no-padding>
+    <button ion-button full style=" color: #000; margin: 0px; border-bottom-left-radius : 5px;  border-bottom-right-radius : 5px;" 
+    color="segundo" [(ngModel)]="total" (click)="clicktoOrder()" ngDefaultControl>TOTAL: {{total}}R$</button>
+</ion-footer>
+

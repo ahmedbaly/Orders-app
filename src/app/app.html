@@ -1,0 +1,30 @@
+<ion-menu  [content]="content"  [swipeEnabled]="false">
+
+  <ion-content class="ion-content-class" padding>
+
+    <div class="marginsidemenu">
+      <img src="assets/imgs/Sans.png" class="profil-img" />  
+    </div>
+
+    <ion-list>
+
+      <ion-list-header class="name" text-center>
+        <h2 ion-text color="gree">{{Name}}</h2>
+      </ion-list-header>
+      
+      <button menuClose ion-button block outline color="gree" (click)="goProfil()">Perfil</button>
+      <!-- <button menuClose ion-button block outline color="gree" *ngIf="cliente" (click)="goMenu()">Cardapio</button> -->
+      <button menuClose ion-button block outline color="gree" *ngIf="garcao" (click)="goMesas()">Mesas</button>
+      <button menuClose ion-button block outline color="gree" *ngIf="cliente" (click)="goGarcao()">Chamar o garcao</button>
+      <button menuClose ion-button block outline color="gree" *ngIf="garcao"  (click)="goGarcao()">Chamar o gerente</button>
+      <button menuClose ion-button block outline color="gree" *ngIf="cliente" (click)="goOrders()">Perdidas</button>
+      <button menuClose ion-button block outline color="gree" (click)="goContactus()">Contate Nos</button>
+      <button menuClose ion-button block color="segundo" (click)="goDeconnection()">Log out</button>
+
+    </ion-list>
+
+  </ion-content>
+  
+</ion-menu>
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

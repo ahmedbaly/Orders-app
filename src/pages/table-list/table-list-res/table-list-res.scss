@@ -1,0 +1,85 @@
+page-table-list-res {
+    position: relative;
+    ion-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    .toolbar-title.toolbar-title-md, 
+    .toolbar-title.toolbar-title-ios, 
+    .toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+    .accordion-list {
+        position: relative;
+        background: map-get($colors, graykit );
+        text-align: center;
+    }
+
+    .groupslideclass{
+        position: relative;
+        padding: 1%;
+    }
+
+    .itemslideclass{
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        width: 95%;
+        border-radius: 6px;
+    }
+
+    .section {
+        position: relative;
+        background: #fff;
+        color: #000;
+        padding-left: 3%; 
+        padding-right: 3%; 
+        padding-top : 1%;
+        padding-bottom: 1%;
+    }
+
+    .section-active {
+        background: #bf0310;
+        color: #fff;
+        padding-left: 3%; 
+        padding-right: 3%; 
+        padding-top : 1%;
+        padding-bottom: 1%;
+    }
+
+    .child-item {
+        padding: 3%;
+        border-radius: 6px;
+    }
+
+    .btn-notactive {
+        background: #bf0310 ; 
+        color: white;
+        width: 25%;
+    }
+
+    .btn-active {
+        background: #f5f5f5 ; 
+        color: black;
+        width: 25%;
+    }
+
+    .toolbar-background{
+        background: #bf0310;
+    }
+
+    .ion-content-class{
+        position: relative;
+        background: map-get($colors, graykit );
+        
+        .marginsidemenu{
+            margin-top: 10%;
+        }
+    }
+
+}

@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-navbar style="position: relative; text-align: center;">
+    <ion-title>Pedidas</ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content class="ion-content-class">
+
+  <button ion-button full color="gris" class="btnBarclass">Ultimas Pedidas</button>
+
+  <ion-list class="listclass" >
+    <ion-item-group *ngFor="let pedida of pedidas" no-lines  class="itemgroupclass">
+        <ion-item (click)="affiche(order)" no-lines  class="itemclass">
+
+          <ion-row >
+            <ion-col>
+              <h2>{{pedida.restaurantName}}</h2>
+              <h2>{{pedida.name}}</h2>
+              <h4> SubTotal: R${{pedida.subtotal}} </h4>
+              <h4> servico: R${{pedida.servico}}</h4>
+              <h3> TOTAL: R${{pedida.total}}</h3>
+              <h5>{{pedida.date}}</h5>
+            </ion-col>
+          </ion-row>
+          
+        </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+</ion-content>
+  
+  

@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Disponivel</ion-title>   
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="ion-content-class">
+
+  <ion-list class="accordion-list">
+    <ion-item-group   *ngFor="let item of tables; let i = index" class="groupslideclass">
+      <ion-item  no-lines (click)="toggleSection(i,item)" detail-none [ngClass]="{'section-active':item.open , 'section': !item.open}">
+          Mesa : {{ item.numTable }}
+          <button ion-button  (click)="openTable(i,item)" [ngClass]="{'btn-active': item.avaibility === 'false' , 'btn-notactive': item.avaibility === 'true' }" item-end> {{item.avaibility === "true" ? 'disponível' : "reservado"}}</button>
+      </ion-item>
+    </ion-item-group >
+  </ion-list>
+  
+</ion-content>

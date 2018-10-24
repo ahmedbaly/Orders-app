@@ -1,0 +1,24 @@
+
+<ion-content  class="model-center"> 
+    <ion-header no-padding style ="position: relative; width: 100%; padding: 0%; margin: 0%;" >
+        <ion-navbar>
+            <ion-title>{{name}}</ion-title>
+                <ion-buttons end>
+                    <button ion-button icon-only (click)="clickback()">
+                        <ion-icon name="close" style="color:white;"></ion-icon>
+                    </button>
+            </ion-buttons>
+        </ion-navbar>
+    </ion-header>
+                  
+          
+    <img src="{{img}}" alt="{{name}}" class="center" >
+    <div text-center class="descriptiontype">{{description}}</div>
+    <google-map></google-map>
+
+    <ion-footer *ngIf="isKeyboardHide" no-padding>
+        <button ion-button full style=" color: #000; margin: 0px; border-bottom-left-radius : 5px;  border-bottom-right-radius : 5px;" 
+        color="segundo" (click)="toGo()" ngDefaultControl>GO !</button>
+    </ion-footer>
+  
+</ion-content>

@@ -1,0 +1,56 @@
+page-mesastabelas{
+    position: relative;
+    background-color: rgba(0,0,0,0.5); 
+
+    .toolbar-title.toolbar-title-md, 
+    .toolbar-title.toolbar-title-ios, 
+    .toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+    .toolbar-background{
+        background: #bf0310;
+        color: white;
+    }
+
+    ion-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: white;
+    }
+    
+    .ion-content-class{
+        position: relative;
+        .marginsidemenu{
+            margin-top: 10%;
+        }
+    }
+
+    .rowClass{
+        width: 100%;   
+    }
+
+    .not_blocked{
+        padding: 2.5%;
+        background: #c2c3c8;
+        color: black;
+        font-style: bold;
+        font-size: 0.5cm;
+        text-align: center;
+        box-shadow:  black;
+        box-shadow: 0 1px 3px rgba(32, 12, 12, 0.122), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    
+    .listclass{
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
+    .sublist{
+        box-shadow:  black;
+        box-shadow: 0 1px 3px rgba(32, 12, 12, 0.122), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+}

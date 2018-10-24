@@ -1,0 +1,54 @@
+
+<ion-header >
+  <ion-navbar >
+    <ion-title>Perfil</ion-title>
+    <ion-buttons *ngIf="alterar" end >
+        <button  ion-button icon-only (click)="save()">
+            <ion-icon name ="checkmark" style="color:white;"> </ion-icon>
+        </button>
+        </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="ion-content-class">
+
+    <div class="div-cover">
+        <img src="assets/imgs/Sans.png" class="profil-img" />  
+    </div>
+
+    <ion-list>
+
+      <ion-item class="itemclass">
+          <ion-label class="span-ion">Email</ion-label>
+          <ion-input class="textareaclass" type="text"  name="email" [(ngModel)]="email"  [readonly]="!alterar">{{email}}</ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label class="span-ion">Nome</ion-label>
+          <ion-input class="textareaclass" type="text" name="name"  [(ngModel)]="name"  [readonly]="!alterar">{{name}}</ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label class="span-ion">Endereço</ion-label>
+          <ion-input class="textareaclass" type="text" name="address" [(ngModel)]="endereco" [readonly]="!alterar"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+          <ion-label class="span-ion">Cidade</ion-label>
+          <ion-input class="textareaclass" type="text" name="city" [(ngModel)]="cidade"  [readonly]="!alterar"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label class="span-ion">Cellular</ion-label>
+          <ion-input class="textareaclass" type="text"  name="tel" [(ngModel)]="cellular" [readonly]="!alterar"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+</ion-content>
+
+<ion-footer no-padding>
+    <button ion-button full (click)="alterarinfo()"  [ngClass]="{'section-active': alterar, 'section': !alterar}">{{ alterar === false ? 'ALTERAR' : "CANCELAR"}}</button>
+</ion-footer>
+  

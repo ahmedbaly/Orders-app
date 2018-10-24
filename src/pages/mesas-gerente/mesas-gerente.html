@@ -1,0 +1,15 @@
+
+<ion-header >
+    <ion-navbar>
+        <ion-buttons end >
+            <button  ion-button icon-only (click)="goHome()">
+                <ion-icon name ="home" style="color:white;"> </ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-tabs>
+  <ion-tab [root]="tab1Root" [rootParams]="user" tabTitle="Garcao" tabIcon="people"></ion-tab>
+  <ion-tab [root]="tab2Root" [rootParams]="user" tabTitle="Tabelas" tabIcon="grid"></ion-tab>
+</ion-tabs>

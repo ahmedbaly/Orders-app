@@ -1,0 +1,21 @@
+page-table-list {
+    position: relative;
+    background-color: rgba(0,0,0,0.5); 
+    .toolbar-title.toolbar-title-md, 
+    .toolbar-title.toolbar-title-ios, 
+    .toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+    
+    .toolbar-background{
+        background:transparent;
+        color : white ;
+    }
+
+    .ion-content-class{
+        position: relative;
+        background: white;
+    }
+
+    
+
+ 
+}

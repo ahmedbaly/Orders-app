@@ -1,0 +1,84 @@
+page-fecharconta {
+    background-color: rgba(0,0,0,0.5); 
+  
+    .toolbar-title.toolbar-title-md, 
+    .toolbar-title.toolbar-title-ios, 
+    .toolbar-title.toolbar-title-wp { color: map-get($colors, light); } 
+    .toolbar-background{background: #bf0310;}
+    
+    .model-center{
+      position: relative;
+      display: center;
+      margin-top: 10%;
+      padding: 0%;
+      margin-left : auto;
+      margin-right : auto;
+      width: 90%;
+      height: 85%;
+      background: map-get($colors, graykit);
+
+      ion-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: white;
+      }
+  
+      .marginsidemenu{
+          margin-top: 10%;
+      }
+
+      ion-header{
+        position: relative; 
+        width: 100%; 
+        padding: 0%; 
+        margin: 0%;
+      }
+
+      .closeicon{
+        color:black; 
+        position: relative; 
+      }
+    
+      .buttonStyle{
+        position: absolute;
+        color: black;
+        margin-left: 40%;
+        margin-top: 0%;
+      }
+  
+      .listclass{
+            background: map-get($colors, graykit);
+            padding: 3%;
+        }
+    
+      .itemgroupclass{
+        background: transparent;
+        position: relative;
+      }
+
+      .itemclass{      
+        padding: 0%;
+        height: 30px;
+          position: relative;
+      }
+
+      .rowClass{
+        width: 100%;
+        }
+    }
+  
+    ion-footer{
+        position: relative;
+        border-radius: 5px;
+        display: center;
+        margin-left : auto;
+        margin-right : auto;
+        background: #bf0310;
+        width: 90%;
+    }
+}

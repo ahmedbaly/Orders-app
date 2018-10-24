@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title>Configuracao</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="addusuario()">
+          <ion-icon name ="add" style="color:white;"></ion-icon>
+      </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+  
+  
+<ion-content class="ion-content-class" no-padding>
+  <ion-list no-padding no-lines>
+      <ion-item-group *ngFor="let item of items; let i = index">
+        <ion-item>
+          <ion-label>{{item.name}}</ion-label>
+          <ion-toggle color="segundo" (ionChange)="reverse(i,item)" [(ngModel)]="item.open"></ion-toggle>
+        </ion-item>
+      </ion-item-group>
+  </ion-list>
+</ion-content>
+  

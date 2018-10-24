@@ -1,0 +1,16 @@
+
+<ion-header >
+    <ion-navbar>
+        <ion-buttons end >
+            <button  ion-button icon-only (click)="goHome()">
+                <ion-icon name ="home" style="color:white;"> </ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-tabs tabsPlacement="top">
+    <ion-tab [root]="tab1Root" [rootParams]="params" tabTitle="pedir" tabIcon="cart"></ion-tab>
+    <ion-tab [root]="tab2Root" [rootParams]="params" tabTitle="pedidas" tabIcon="checkmark-circle"></ion-tab>
+</ion-tabs>
+  

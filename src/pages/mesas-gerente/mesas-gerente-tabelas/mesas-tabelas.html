@@ -1,0 +1,37 @@
+<ion-header >
+    <ion-navbar>
+        <ion-title>TABELAS</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="ion-content-class" padding>
+
+    <ion-list no-padding no-lines>
+        <ion-item-group *ngFor="let mesa of mesas; let i = index"  >
+            <ion-item-divider class="not_blocked">
+                mesa : {{ mesa.numTable }} 
+            </ion-item-divider>
+
+            <ion-list class="listclass" no-lines>
+                <ion-item-group class="sublist" *ngFor="let order of orders; let j = index"  >
+                    <ion-item *ngIf="mesa.id === order.id_table" detail-none text-wrap>
+                        <ion-row class="rowClass" >
+                            <ion-col col-6 text-wrap padding>
+                                <h4>{{order.name}}</h4>
+                                <p text-lowercase>{{ order.description_client }}</p>
+                            </ion-col>
+                            <ion-col col-2 padding>
+                                <h6 >{{order.quantity}}</h6>
+                            </ion-col> 
+                            <ion-col  col-4 padding>
+                                <h6> R${{order.price}}</h6>
+                            </ion-col>
+                        </ion-row>
+                    </ion-item>
+                </ion-item-group>
+            </ion-list>
+
+        </ion-item-group>
+    </ion-list>
+
+</ion-content>

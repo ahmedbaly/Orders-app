@@ -1,0 +1,32 @@
+<ion-content  class="model-center"> 
+
+    <ion-header no-padding style ="position: relative; width: 100%; padding: 0%; margin: 0%;" >
+        <ion-navbar>
+            <ion-title>CONTATE NOS</ion-title>
+        </ion-navbar>
+    </ion-header>
+           
+    <ion-list padding class="list">
+
+        <ion-item class="item">
+            <ion-label  type="email" stacked>Email</ion-label>
+            <ion-textarea class="textareaclass" rows="2" [(ngModel)]="email"></ion-textarea>
+        </ion-item> 
+
+        <ion-item>
+            <ion-label stacked>Pergunta e comentários</ion-label>
+            <ion-textarea class="textareaclass" rows="11" [(ngModel)]="pergunta"></ion-textarea>
+        </ion-item>
+
+    </ion-list>
+
+
+    <ion-footer *ngIf="isKeyboardHide" no-padding>
+        <button ion-button full style="color: #000; margin: 0px; border-bottom-left-radius : 5px;  border-bottom-right-radius : 5px;" 
+        color="segundo" (click)="Eviaremail()">ENVIAR</button>
+    </ion-footer>
+
+</ion-content>
+
+
+

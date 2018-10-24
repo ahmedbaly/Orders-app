@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button icon-only (click)="goMenun()">
+          <ion-icon name ="menu" style="color:white;"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>MENU</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="ion-content-class">
+
+  <ion-card>
+
+    <img src="./assets/imgs/rest10.jpg">
+    <div class="card-title">Crowd</div>
+    <div class="card-subtitle">Nossos clientes são incríveis!!! Sente a vibe!!! E hoje, a partir das 16h, tem a famosa Roda de Samba</div>
+    
+  </ion-card>
+
+  <ion-grid class="grid-menu" >
+
+    <ion-row class = "row-menu">
+      <ion-col shadow text-center col-6 *ngFor="let item of items" (click)="itemSelected(item)" class="col-menu">
+        <ion-icon class="icon-menu" name="{{item.icon}}"></ion-icon>
+        <p>{{item.name}}</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

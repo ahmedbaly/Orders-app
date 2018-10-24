@@ -1,0 +1,25 @@
+<ion-header >
+  <ion-navbar>
+    <ion-title text-center >Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="ion-content-class">
+  <img text-center class="imageclass" src="./assets/imgs/cover1.jpg">
+  
+    <ion-list class="list">
+
+      <ion-item class="item">
+        <ion-input class="input" type="email" placeholder=" Login" [(ngModel)]="login"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="input" type="password" placeholder=" Senha" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <button ion-button full color="segundo" (click)="CheckConnectivity()">Login</button>
+      
+    </ion-list>
+
+</ion-content> 
+

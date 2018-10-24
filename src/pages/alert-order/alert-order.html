@@ -1,0 +1,37 @@
+
+<ion-content  class="model-center"> 
+    <ion-header no-padding style ="position: relative; width: 100%; padding: 0%; margin: 0%;" >
+        <ion-navbar>
+            <ion-title>{{name}}</ion-title>
+                <ion-buttons end>
+                    <button ion-button calss="closeicon" icon-only (click)="clickback()">
+                        <ion-icon name="close" ></ion-icon>
+                    </button>
+            </ion-buttons>
+        </ion-navbar>
+    </ion-header>
+
+        <button  ion-button full  style=" background : #f5f5f5; color : #000 ; height: 8%; margin : 0px;">
+                <h2 ion-text color="dark"> R${{price}}x{{quantity}} </h2>
+
+                <button ion-button color="segundo" class="buttonStyle" (click)="increaseQuantity()" >
+                    <ion-icon name="add"></ion-icon>
+                </button>     
+        </button>       
+                
+        <img src="assets/imgs/salgados.jpg" alt="{{name}}" class="center" >
+        <div text-center style="color:#3e3e3f">{{description}}</div>
+        
+        <ion-list class ="list">
+            <ion-item class="item">
+                <ion-label  stacked>Descrição</ion-label>
+                <ion-textarea  class="textareaclass"  rows="6" [(ngModel)]="description_order" placeholder="Colocar seu descrição"></ion-textarea>
+            </ion-item>
+        </ion-list>
+
+    <ion-footer *ngIf="isKeyboardHide" no-padding>
+            <button ion-button full style=" color: #000; margin: 0px; border-bottom-left-radius : 5px;  border-bottom-right-radius : 5px;" 
+            color="segundo" [(ngModel)]="total" (click)="clicktoOrder()" ngDefaultControl>TOTAL: {{total}}R$</button>
+    </ion-footer>
+    
+</ion-content>

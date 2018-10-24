@@ -1,0 +1,27 @@
+page-qrcreator {
+    background-color: rgba(0,0,0,0.5); 
+    .toolbar-title.toolbar-title-md, 
+    .toolbar-title.toolbar-title-ios, 
+    .toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+    .toolbar-background{
+        background: #bf0310;
+        color: white;
+    }
+    .ion-content-class{
+        position: relative;
+        .marginsidemenu{
+            margin-top: 10%;
+        }
+    }
+
+    ion-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: white;
+    }
+}

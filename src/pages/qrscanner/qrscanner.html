@@ -1,0 +1,50 @@
+
+<ion-header>
+  <ion-navbar>
+      <ion-buttons start >
+          <button ion-button icon-only (click)="profil()">
+            <ion-icon name ="menu" style="color:white;" ></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>
+      Restaurants
+    </ion-title>
+    <ion-buttons end >
+        <button ion-button icon-only (click)="scanCode()">
+          <ion-icon name ="qr-scanner" style="color:white;" ></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+   
+<ion-content no-padding>
+
+  <ion-slides class="slidesclassauto" autoplay="1000" loop="true" speed="3000">
+
+      <ion-slide class="slideitemauto"  *ngFor="let promo of promotions"  > 
+
+        <ion-card class="card-class-auto">
+          <img src="{{promo.img}}" class="imageclassauto" />
+          <div class="cardtitleauto">{{promo.name}}</div>
+        </ion-card>
+
+      </ion-slide>
+
+  </ion-slides>
+
+    <h2 class="categorititle">Favoritos :</h2>
+
+    <ion-grid>
+      <ion-row justify-content-start >
+        <ion-col  *ngFor="let promo of promotions1 ; let i = index" col-6 no-padding>
+
+          <ion-card class="card-class" no-padding>
+            <img class="imageclass" (click)="openCard(i,promo)" src="{{promo.img}}" no-padding> 
+            <div class="card-title" (click)="openCard(i,promo)">{{promo.name}}</div>
+          </ion-card>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+</ion-content>

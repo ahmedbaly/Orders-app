@@ -1,0 +1,44 @@
+app-page{
+    padding: 0%;
+    
+    ion-content-header{
+        position: relative;
+    }
+
+    .profil-img {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 250px;
+        border: 2px solid rgb(255, 255, 255);
+        display: block;
+        padding: 0%;
+    }
+
+    .name{
+        background : #c2c3c8 ;
+        color: #474749;
+        margin-bottom: 8%;
+    }
+
+    .ion-content-class{
+        position: relative;
+        background: #e6e7eb;
+        padding: 0%;
+
+        .marginsidemenu{
+            margin-top: 10%;
+        }
+    }
+
+    .buttonCss {
+        button.alert-button.exit-button{
+          color: red;
+        }
+        button.alert-button.cancel-button{
+          color: green;
+        }
+    }
+
+}

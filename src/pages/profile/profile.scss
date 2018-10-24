@@ -1,0 +1,84 @@
+page-profile {
+    position: relative;
+    background-color: rgba(0,0,0,0.5); 
+    .toolbar-title.toolbar-title-md, 
+    .toolbar-title.toolbar-title-ios, 
+    .toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+    .toolbar-background{
+        background: #bf0310;
+        color: white;
+    }
+
+    .ion-content-class{
+        position: relative;
+        background: white;
+
+
+        .marginsidemenu{
+            margin-top: 10%;
+        }
+    }
+
+    .div-cover{
+        position: relative;
+        margin-bottom: 2%;
+    }
+    .profil-img {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .span-ion{
+        width: 25%;
+    }
+    
+    .btn-ion{
+        color : black;
+        margin : 0px;
+    }
+
+    ion-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    ion-list{
+        position: relative;
+        background: #fff;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: block;
+
+    }
+    .textareaclass{
+        background:  map-get($colors, graykit); 
+        border-radius: 5px;
+    }
+
+    .section {
+        background: map-get($colors, segundo);
+        color: #000; 
+        padding : 3px;
+        margin-bottom: 0px;
+        border-radius:2%;
+
+    }
+
+    .section-active {
+        background: map-get($colors, vermelha);
+        color: #fff;
+        padding : 3px;
+        margin-bottom: 0px;
+    }
+
+}

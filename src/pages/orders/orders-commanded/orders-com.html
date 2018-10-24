@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pedidas</ion-title>
+  </ion-navbar>
+</ion-header>
+    
+<ion-content class="ion-content-class">
+  <button ion-button full color="gris"  style="color : #000 ; height: 8%; margin : 0px;" > {{total}}R$</button> 
+
+  <ion-list class="listclass" >
+    <ion-item-group *ngFor="let order of orderTable" no-lines  class="itemgroupclass">
+
+        <ion-item (click)="affiche(order)" no-lines  class="itemclass">
+          <ion-row >
+
+            <ion-col col-2>
+              <ion-avatar item-start>
+                  <img src="assets/imgs/salgados.jpg">
+              </ion-avatar>
+            </ion-col>
+
+            <ion-col col-8>
+              <h2>{{order.name}}</h2>
+              <h3> R${{order.price}} X {{order.quantity}}</h3>
+              <h4>{{order.description}}</h4>
+            </ion-col>
+
+          </ion-row>
+        </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+</ion-content>
+  
+<ion-footer no-padding>
+    <button ion-button round class="buttonclass" color="segundo" (click)="AlertPedida()">Fechar a conta: {{total}}R$</button>
+</ion-footer>
+  

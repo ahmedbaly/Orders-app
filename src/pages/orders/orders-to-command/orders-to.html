@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pedir</ion-title>
+  </ion-navbar>
+</ion-header>
+
+  
+<ion-content class="ion-content-class">
+
+  <button ion-button full color="graykit"  class="btnBarclass" [(ngModel)]="total" [(ngModel)]="quantitytotal" ngDefaultControl > {{quantitytotal}} Inid ({{total}}R$)</button>
+  <button ion-button full color="gris" class="btnBarclass">deslizar para exluir inid</button>
+
+  <ion-list class="listclass" >
+    <ion-item-sliding *ngFor="let order of orders" no-lines  class="itemslideClass">
+
+      <ion-item no-lines class="itemclass">
+        <ion-row >
+
+          <ion-col col-2>
+            <ion-avatar item-start>
+                <img src="assets/imgs/salgados.jpg">
+            </ion-avatar>
+          </ion-col>
+
+          <ion-col col-8>
+            <h2>{{order.name}}</h2>
+            <h3> R${{order.price}} X {{order.quantity}}</h3>
+            <h4>{{order.description}}</h4>
+          </ion-col>
+
+        </ion-row>      
+      </ion-item>
+
+      <ion-item-options class="itemOptions" side="right">
+        <button ion-button icon-only color="vermelha" (click)="delete(order)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer no-padding>
+  <button ion-button round class="buttonclass" color="segundo" (click)="AlertPedida()">PEDIR: {{total}}R$</button>
+</ion-footer>
+  

@@ -1,0 +1,28 @@
+
+<ion-header >
+    <ion-navbar>
+        <ion-title>GARCAOES</ion-title>
+    </ion-navbar>
+</ion-header>
+    
+
+<ion-content class="ion-content-class" padding>
+    <ion-list no-padding no-lines>
+        <ion-item-group *ngFor="let garcao of garcaoes; let i = index"  >
+            <ion-item-divider [ngClass]="{'not_blocked': garcao.rest_block === 'S' , 'blocked': garcao.rest_block  === 'N' }">
+                <ion-icon name="add" (click)="addTable(garcao)" item-end></ion-icon>
+                {{ garcao.name }} 
+            </ion-item-divider>
+
+            <ion-list class="listclass" no-lines>
+                <ion-item-group class="sublist" *ngFor="let mesa of mesas; let j = index"  >
+                    <button (click)="deleteMesa(mesa)" *ngIf="mesa.id_servidor === garcao.id" ion-item outline  >
+                        Mesa : {{ mesa.numTable }}
+                        <button ion-button [ngClass]="{'btn-active': mesa.avaibility === 'false' , 'btn-notactive': mesa.avaibility === 'true' }" item-end> {{mesa.avaibility === "true" ? 'disponível' : "reservado"}}</button>
+                    </button>
+                </ion-item-group>
+            </ion-list>
+        </ion-item-group>
+    </ion-list>
+</ion-content>
+
